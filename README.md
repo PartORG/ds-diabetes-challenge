@@ -1,69 +1,82 @@
-[![Shipping files](https://github.com/neuefische/ds-diabetes-challenge/actions/workflows/workflow-02.yml/badge.svg?branch=main&event=workflow_dispatch)](https://github.com/neuefische/ds-diabetes-challenge/actions/workflows/workflow-02.yml)
-# Diabetes Challenge
+# PartORG/ds-diabetes-challenge
 
-After we learned some interesting algorithms to solve classification problems, it's time to implement them on new data and to compare their performance. You can find the challenge for today in the second notebook [Diabetes Challenge](2_Diabetes_Challenge.ipynb). If you need more information about the data set, you can have a look at the [Paper](Paper_on_Diabetes_Mellitus_Data_Set.pdf) included in this repo.
+Analyze and predict diabetes outcomes using machine learning models.
 
-The first notebook will introduce the concept of **pipelines**. Sklearn provides us is with a module that makes the usage of pipelines fun and easy. 
+## Overview
 
+This repository contains a Jupyter Notebook challenge for implementing classification algorithms on new data, comparing their performance, and understanding pipelines in scikit-learn. The dataset is included in `data/diabetes_data.csv`, and the challenge details are provided in `2_Diabetes_Challenge.ipynb`.
 
-## Set up your Environment
+## Requirements
 
-Please make sure you have forked the repo and set up a new virtual environment. For this purpose you can use the following commands:
+To run this project, you need the following dependencies with specified versions:
 
-The added [requirements file](requirements.txt) contains all libraries and dependencies we need to execute the Diabetes Challenge notebooks.
+- jupyterlab==3.6.3
+- Pillow==9.5.0
+- matplotlib==3.7.1
+- seaborn==0.12.2
+- numpy==1.24.3
+- pandas==2.0.1
+- scikit-learn==1.2.2
+- python-dotenv==1.0.0
+- psycopg2-binary
+- SQLAlchemy==2.0.15
+- imbalanced-learn
 
-*Note: If there are errors during environment setup, try removing the versions from the failing packages in the requirements file. M1 shizzle.*
+## Installation
 
-### **`macOS`** type the following commands : 
+### macOS
 
-- We have also added a [Makefile](Makefile) which has the recipe called 'setup' which will run all the commands for setting up the environment.
-Feel free to check and use if you are tired of copy pasting so many commands.
+To set up your environment on macOS, use the following commands:
 
-     ```BASH
-    make setup
-    ```
-    After that active your environment by following commands:
-    ```BASH
-    source .venv/bin/activate
-    ```
-Or ....
-- Install the virtual environment and the required packages by following commands:
+```bash
+make setup
+```
 
-    ```BASH
-    pyenv local 3.11.3
-    python -m venv .venv
-    source .venv/bin/activate
-    pip install --upgrade pip
-    pip install -r requirements.txt
-    ```
-    
-### **`WindowsOS`** type the following commands :
+After that, activate your environment with:
 
-- Install the virtual environment and the required packages by following commands.
+```bash
+source .venv/bin/activate
+```
 
-   For `PowerShell` CLI :
+### WindowsOS
 
-    ```PowerShell
-    pyenv local 3.11.3
-    python -m venv .venv
-    .venv\Scripts\Activate.ps1
-    python -m pip install --upgrade pip
-    pip install -r requirements.txt
-    ```
+For WindowsOS, follow these steps:
 
-    For `Git-bash` CLI :
-  
-    ```BASH
-    pyenv local 3.11.3
-    python -m venv .venv
-    source .venv/Scripts/activate
-    python -m pip install --upgrade pip
-    pip install -r requirements.txt
-    ```
+#### PowerShell CLI
 
-    **`Note:`**
-    If you encounter an error when trying to run `pip install --upgrade pip`, try using the following command:
-    ```Bash
-    python.exe -m pip install --upgrade pip
-    ```
-  
+```powershell
+pyenv local 3.11.3
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+#### Git-bash CLI
+
+```bash
+pyenv local 3.11.3
+python -m venv .venv
+source .venv/Scripts/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+If you encounter an error when trying to run `pip install --upgrade pip`, use:
+
+```bash
+python.exe -m pip install --upgrade pip
+```
+
+## Usage
+
+To run the project, execute the following commands:
+
+1. Activate your virtual environment.
+2. Open the Jupyter Notebook by running:
+
+   ```bash
+   jupyter lab 2_Diabetes_Challenge.ipynb
+   ```
+
+This will open the Diabetes Challenge notebook in JupyterLab where you can follow along with the instructions and complete the challenge.
